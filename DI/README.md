@@ -56,7 +56,7 @@ internal class ClassB: IClassB
 IClassB classB = new ClassB();
 
 // the dependency injection in action.
-IClassA classA = new IClassA(classB);
+IClassA classA = new ClassA(classB);
 
 classA.UseDependency();
 ```
