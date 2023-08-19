@@ -10,11 +10,11 @@ A class should not directly create instances of another class it depends on;
 // ClassA.cs
 class ClassA: IClassA
 {
-		// STRICTLY AVOID THIS.
+    // STRICTLY AVOID THIS.
     public void UseDependency()
     {
-				ClassB objectB = new ClassB();  // creating high coupled code
-				objectB.Method();
+	ClassB objectB = new ClassB();  // creating high coupled code
+	objectB.Method();
     }
 }
 ```
@@ -27,8 +27,8 @@ class ClassA: IClassA
 {
     private readonly IClassB _instanceB;
 
-		// constructor dependency injection
-    public Client(IClassB injectedInstance)
+    // constructor dependency injection
+    public ClassA(IClassB injectedInstance)
     {
         this._instanceB = injectedInstance;
     }
